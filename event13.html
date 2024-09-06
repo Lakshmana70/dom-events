@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <style>
+         img{
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            
+         }
+         #s1{
+            color: red;
+            font-family: Arial, Helvetica, sans-serif;
+         }
+
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1 id="s1">show images using URL</h1>
+           
+             <h1>Enter img URL <input type="text" id="d1"></h1>
+           
+            <div>
+                <button onclick="abc()">Add image</button> 
+            </div>
+             <div id="d2">
+              
+             </div>
+        </center>
+      <script>
+             var y=document.getElementById("d1")
+             function abc(){
+            var nim=document.createElement("img")
+              nim.src=y.value
+              document.getElementById("d2").appendChild(nim)
+             }
+        </script>
+    </body>
+</html>

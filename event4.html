@@ -1,0 +1,25 @@
+<html>
+    <head>
+    
+    </head>
+    <body>
+        <div id="d1" onclick="abc(event)"></div>
+        <script>
+          var y=document.getElementById("d1")
+          y.style.width="100px"
+          y.style.height="100px"
+          y.style.border="2px solid"
+        
+          var ar=["red","blue","green","yellow"]
+            var i=1;
+            function abc(e){
+                document.getElementById("d1").style.backgroundColor=ar[i]
+                i++
+                if(i==ar.length){
+                    i=0
+                }
+            }
+
+        </script>
+    </body>
+</html>

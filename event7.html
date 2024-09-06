@@ -1,0 +1,28 @@
+<html>
+    <body>
+        <div id="s1"></div>
+        <div >
+            <button onclick="abc(event)">true/false</button>
+
+        </div>
+        <script>
+           var y=document.getElementById("s1")
+           console.dir(y)
+           y.style.width="100px"
+           y.style.height="150px"
+           y.style.border="2px solid"
+           y.innerText="IM NOTHING"
+           
+           var ar=["TRUE","FALSE"] 
+           var i=0
+           function abc(){
+            y.innerText=ar[i]
+            i++
+          if(i==ar.length){
+             i=0
+            }
+           }
+
+        </script>
+    </body>
+</html>

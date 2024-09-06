@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <style>
+            #s2{
+                color: red;
+                text-align: center;
+            }
+            #s3{
+                text-align: center;
+                
+            }
+            #s1{
+             margin-left: 690px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h1 id="s2">Change the background colour of  box  using button</h1>
+        <div id="s1"></div>
+        <div id="s3">
+            <button onclick="lak(event)" id="b1">on</button>
+            <button onclick="lak(event)" id="b2">off</button>
+    
+        </div>
+        <script>
+         var y=document.getElementById("s1")
+           y.style.width="150px"
+           y.style.height="150px"
+           y.style.border="solid 2px"
+      
+           
+         
+           var x=document.getElementById("b1")
+              x.style.backgroundColor="orange"
+            var p=document.getElementById("b2")
+                 p.style.backgroundColor="orange"
+                 p.style.marginTop="10px"
+         function lak(ev){
+             if(ev.target.innerHTML=="on"){
+                y.style.backgroundColor="yellow"
+                x.style.backgroundColor="red"
+                p.style.backgroundColor="white"
+             }
+                else
+                if (ev.target.innerHTML=="off"){
+                y.style.backgroundColor="white"
+                x.style.backgroundColor="white"
+                p.style.backgroundColor="red"
+
+              }
+            }
+           
+                  
+                
+             
+         
+        </script>
+    </body>
+</html>

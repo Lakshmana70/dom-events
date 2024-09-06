@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <style>
+           
+            img{
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                margin-left: 80px;
+               
+            }
+            #d1  h1{
+                font-size: medium;
+                text-align: center;
+                color: red;
+              
+            }
+        </style>
+        <body>
+            
+            <center>
+               <form onsubmit="d1">
+                   
+                <h1>Name <input type="text" id="s1"></h1>
+                <h1>Mobile <input type="text" id="s2"></h1>
+                <h1> Email <input type="text" id="s3"></h1>
+                <h1> Image URL <input type="text" id="s4"></h1>
+           
+               </form>
+                <button onclick="xyz(event)">Add cards</button>
+            </center>
+           
+              <div id="d1">
+                
+              </div>
+              <script>
+              
+               
+                var ar=[]  
+                
+               
+                function obj(i,n,m,e){
+                this.img=i
+                this.name=n
+                this.mobile=m
+                this.email=e
+               
+            }
+            
+               
+
+                var x=document.getElementById("s1")
+                var y=document.getElementById("s2")
+                var z=document.getElementById("s3")
+                var a=document.getElementById("s4")
+               
+                function xyz(){
+                 var d1=document.getElementById("d1")
+                  d1.style.width="250px"
+                  d1.style.height="200px"
+                  d1.style.border="2px solid"
+                  d1.style.backgroundColor="yellow"
+                  var img=document.createElement("img")
+                  img.src=a.value
+                  d1.appendChild(img)
+              
+                var nh1=document.createElement("h1")
+                   nh1.innerHTML="Name :"+x.value
+                    
+                   
+                   d1.appendChild(nh1)
+                var nh2=document.createElement("h1")
+                   nh2.innerHTML="Phone number :"+y.value
+                
+                  
+                   d1.appendChild(nh2)
+                var nh3=document.createElement("h1")
+                     nh3.innerHTML="Email :"+z.value
+                     d1.appendChild(nh3)
+                     var eb=document.createElement("button")
+                     eb.innerHTML="Edit"
+                      d1.appendChild(eb)
+                     eb.style.backgroundColor="skyblue"
+               
+                     var img=a.value
+                     var name=x.value
+                     var mobile=y.value
+                     var email=z.value
+                
+            
+               var em1=new obj(img,name,mobile,email)
+               ar.push(em1)
+               console.log(ar)
+               }
+               
+        
+
+            </script>
+        </body>
+    </head>
+</html>

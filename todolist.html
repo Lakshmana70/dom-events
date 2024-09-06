@@ -1,0 +1,59 @@
+<html>
+    <head></head>
+    <body>
+        <center>
+            <input type="text" id="d1">
+            <button onclick="abc(event)" id="d3">To do</button>
+            <div id="d2">
+
+            </div>
+        </center>
+        <script>
+            var ar=[]
+           function abc(){
+           var y=document.getElementById("d1").value
+            ar.push(y)
+            xyz()
+        
+           
+    
+       
+           }
+           function xyz(){
+            document.getElementById("d2").innerHTML=" "
+            ar.forEach(function(m,i){
+                var nli=document.createElement('li')
+                  nli.innerHTML=m
+                document.getElementById("d2").appendChild(nli)
+                var button=document.createElement("button")
+                button.innerHTML="delete"
+                 nli.appendChild(button)
+                var  ebutt=document.createElement("button")
+                 ebutt.innerHTML="Edit"
+                 nli.appendChild(ebutt)
+                 ebutt.onclick=function(){
+                 var a= document.getElementById("d3")
+                 a.innerHTML="save"
+                   var b= document.getElementById("d1")
+                     b.value=m
+                    
+                  
+                     if(a.innerHTML=="save"){
+                        ar[i]=b.value
+                        xyz()
+                    }
+                   
+                 }
+                 button.onclick=function(){
+                      ar.splice(i,1)
+                      xyz()
+                  }
+                 
+               
+             })
+            
+           }
+         
+        </script>
+    </body>
+</html>

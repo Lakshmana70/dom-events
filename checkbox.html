@@ -1,0 +1,31 @@
+<html>
+    <head></head>
+    <body>
+        <input type="checkbox" onchange="abc(event)" name="tech" value="HTML">:HTML
+        <input type="checkbox" onchange="abc(event)" name="tech" value="CSS">:CSS
+        <input type="checkbox" onchange="abc(event)" name="tech" value="JS">:JS
+        <input type="checkbox" onchange="abc(event)" name="tech" value="REACT">:REACT
+        <input type="checkbox" onchange="abc(event)" name="tech" value="JAVA">:JAVA
+        <input type="checkbox" onchange="abc(event)" name="tech" value="NODE JS">:NODE JS
+        <input type="checkbox" onchange="abc(event)" name="tech" value="MONGO">:MONGO
+        <ul id="d1">
+
+        </ul>
+        <script>
+         function abc(ev){
+            
+            document.getElementById("d1").innerHTML=" "
+          var y=document.getElementsByName("tech")
+              y.forEach(function(s){
+                if(s.checked===true){
+                    var x=document.createElement("li")
+                     x.innerHTML=s.value
+                    document.getElementById("d1").appendChild(x)
+                }
+             
+           })
+         }
+        
+        </script>
+    </body>
+</html>

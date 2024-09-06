@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <style>
+            #s1{
+                 text-align: center;
+                 color: red;
+            }
+            #s2{
+                text-align: center;
+                background-color: ;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="s1">Change button background color on click </h1>
+        <div id="s2">  
+                  <button onclick="abc(event)"  >blue</button>
+        </div>
+        <script>
+            e.target.innerHTML="blue"
+           e.target.backgroundColor="blue"
+        function abc(e){
+            if(e.target.innerHTML=="blue"){
+                e.target.innerHTML="green"
+                e.target.style.backgroundColor="green"
+            }
+            else{
+                e.target.innerHTML="blue"
+                e.target.style.backgroundColor="blue"
+            }
+
+           }
+
+          
+              
+        
+        </script>
+    </body>
+</html>

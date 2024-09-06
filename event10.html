@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <style>
+            #s1{
+                width: 150px;
+                height: 150px;
+                border: 2px solid;
+               margin-left: 690px;
+            }
+            #s2{
+                color: red;
+                text-align: center;
+            }
+            #d1{
+                text-align: center;
+                  margin-top: 5px;
+            }
+            #d2{
+                background-color: aquamarine;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="s2">change the background-color using toggle button</h1>
+        <div id="s1"></div>
+        <div id="d1">
+           
+            <button onclick="abc(event)" id="d2">toggle</button>
+        </div>
+        <script>
+          var y=document.getElementById("s1")
+           var ar=["yellow","white"]
+           var i=0;
+           function abc(){
+            y.style.backgroundColor=ar[i]
+              i++
+              if(i==ar.length){
+                i=0
+              }
+           }
+        </script>
+    </body>
+</html>

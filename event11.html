@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            #d1{
+                width: 200px;
+                height: 150px;
+               
+               
+            }
+            #s1{
+                color: red;
+                text-align: center;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1 id="s1"> show bulb on/off image using toggle button</h1>
+            <div   ><img id="d1" ><img></div>
+            <button onclick="abc(event)" >on</button>
+        </center>
+       
+        <script>
+          var ar=["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSshTk-v6um52BSaYEsy81rl0BzGp5fdXIe4A&s","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRPzxvu_XVlLf8hY5hpLNKXWRK5jrRM4oEH9Bf14kYPB59794VHNbDSYEgp7c9SEEaCJk&usqp=CAU"]
+          var i=1
+          var br=["on","off"]
+          function abc(ev){
+            ev.target.innerHTML=br[i]
+            document.getElementById("d1").src=ar[i]
+            i--
+            if(i<0){
+                i=1
+            }
+          }
+        </script>
+    </body>
+</html>

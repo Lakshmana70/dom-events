@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <style>
+           #s2 li{
+            border: 2px solid;
+            height: 200px;
+            width: 250px;
+           }
+        </style>
+    </head>
+    <body>
+      <form  onsubmit="abc(event)">
+        <table border="2px solid" cellpading="0" >
+          <tr >
+            <td> first name</td>
+            <td><input type="text" name="firstname"></td>
+          </tr> 
+          <tr>
+            <td>Last name</td>
+            <td><input type="text"  name="lastname"></td>
+          </tr> 
+           <tr>
+             <td>Date of birth</td>
+             <td>
+                <input type="date"  name="date" >
+             </td>
+           </tr>
+          <tr id="d1">
+            <td border="none">gender</td>
+            <td>
+                <input type="radio" name="gender" value="male" >:male 
+                <input type="radio" name="gender" value="female" >:female
+                <input type="radio" name="gender" value="others" >:others
+            </td>
+          </tr> 
+          <tr>
+            <td>Technologies</td>
+            <td>
+                <input type="checkbox" name="tec" value="HTML">HTML
+                <input type="checkbox" name="tec" value="CSS">CSS
+                <input type="checkbox" name="tec" value="BOOTSTARP">BOOTSTARP
+                <input type="checkbox" name="tec" value="REACT">REACT
+                <input type="checkbox" name="tec" value="JAVA">JAVA
+                
+            </td>
+          </tr>
+            <tr>
+                <td>Country</td>
+                <td>
+                    <select  name="country">
+                        <option >india</option>
+                        <option >usa</option>
+                        <option >canada</option>
+                        <option >srilanka</option>
+                        <option >uk</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td >Comments</td>
+                <td><input type="text" name="comments"></td>
+            </tr>
+               <tr  >
+                <td align="center"><button>save</button></td>
+               </tr>
+        </table>
+
+      </form>
+       <table border="2px">
+        <tr>
+          <td>first name</td>
+          <td>Last name</td>
+          <td>date of birth</td>
+          <td>gender</td>
+          <td>Technologies</td>
+          <td>country</td>
+  
+        </tr>
+        <tbody id="s1">
+
+        </tbody>
+     </table>
+     
+        
+        <script>
+             
+              var ar=[]
+              console.log(ar)
+             function abc(ev){
+              ev.preventDefault()
+              var form=new FormData(ev.target)
+              var dataobj={};
+              for(var i of form.entries()){
+                var x=form.getAll(i[0])
+                if(x.length>1){
+                  dataobj[i[0]]=x
+                }
+                else{
+                  dataobj[i[0]]=form.get(i[0])
+                }
+             }
+                ar.push(dataobj)
+                console.log(ar)
+                ev.target.reset()
+
+                document.getElementById("s1").innerHTML=" ";
+                ar.forEach(function(s){
+                  var ntr=document.createElement("tr")
+                  var ntd=document.createElement("td")
+                     ntd.innerHTML=s["firstname"]
+                  var ltd=document.createElement("td")
+                     ltd.innerHTML=s["lastname"] 
+                  var dtd=document.createElement("td")
+                     dtd.innerHTML=s["date"] 
+                  var gtd=document.createElement("td")
+                     gtd.innerHTML=s["gender"] 
+                      var ttd=document.createElement("td")
+                      ttd.innerHTML=s["tec"]
+                    var ctd=document.createElement("td")
+                     ctd.innerHTML=s["country"]  
+                     ntr.appendChild(ntd)
+                     ntr.appendChild(ltd)
+                     ntr.appendChild(dtd)
+                     ntr.appendChild(gtd)
+                     ntr.appendChild(ttd)
+                     ntr.appendChild(ctd)
+                    document.getElementById("s1").appendChild(ntr)
+                })
+               
+                
+             
+                 
+           
+          }
+         
+          
+         
+            
+              
+
+                
+            
+            
+        </script>
+    </body>
+</html>

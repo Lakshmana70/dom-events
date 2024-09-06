@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <style>
+            .xyz{
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+               
+                margin-left: 35%;
+                margin-right: 35%;
+              }
+             .d1{
+               height: 20px;
+               margin-top: 32px;
+               margin-left: 5px;
+             }
+             .xyz h1{
+                color: red;
+            
+             }
+             img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+               margin-left: 100px;
+               margin-top: 1px;
+               
+                
+             }
+            
+        </style>
+    </head>
+    <body>
+       <center>
+        <h1>add cards</h1>
+        <div  class="xyz">
+           
+               <h1>Name</h1>
+               <input type="text" id="d1" class="d1">
+
+        </div>
+        <div  class="xyz">
+           
+               <h1>Number</h1>
+               <input type="text" id="d2" class="d1">
+
+        </div>
+        <div  class="xyz">
+           
+               <h1>Email</h1>
+               <input type="text" id="d3" class="d1">
+
+        </div>
+        <div  class="xyz">
+           
+               <h1>Enter image URL</h1>
+               <input type="text" id="d4" class="d1">
+
+        </div>
+        <div>
+           <button onclick="abc(event)">Add Contact</button>
+        </div>
+       
+
+       </center>
+       <div id="s1" >
+
+       </div>
+          
+        
+        <script>
+            var x=document.getElementById("d1")
+            var y=document.getElementById("d2")
+            var z=document.getElementById("d3")
+            var a=document.getElementById("d4")
+           function abc(){
+              var s=document.getElementById("s1")
+              s.style.border="solid "
+              s.style.width="250px"
+              s.style.height="200px"
+              s.style.justifyItems="center"
+              s.style.backgroundColor="yellow"
+              var img=document.createElement("img")
+                  img.src= a.value
+                  s.appendChild(img)
+              var nh1=document.createElement("h1")
+              nh1.innerText= " Name :"+ x.value
+              nh1.style.fontSize="large"
+               nh1.style.textAlign="center"
+           
+              s.appendChild(nh1)
+              var nh1=document.createElement("h1")
+              nh1.innerText= " Number :"+ y.value
+              nh1.style.fontSize="large"
+              nh1.style.textAlign="center"
+               s.appendChild(nh1)
+              var nh1=document.createElement("h1")
+              nh1.innerText= "Email  : "+ z.value
+              nh1.style.fontSize="large"
+              nh1.style.textAlign="center"
+             s.appendChild(nh1)
+              
+           }
+        </script>
+    </body>
+</html>

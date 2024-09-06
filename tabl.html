@@ -1,0 +1,111 @@
+<html>
+    <head>
+        <style>
+           
+        </style>
+    </head>
+    <body>
+        <table  border=solid>
+            <thead>
+               <tr>
+                <th>firstname</th>
+                <th> lastname</th>
+                <th>age</th>
+                <th>gender</th>
+                <th>city</th>
+                <th>salary</th>
+               </tr>
+            </thead>
+            <tbody id="s1">
+
+            </tbody>
+        </table>
+       
+
+        <script>
+            var x=document.getElementById("s1")
+            var z=document.getElementById("s2")
+            
+            var people = [
+            {
+            "firstname": "praveen",
+            "lastname": "gubbala",
+            "age": 36,
+            "gender": "male",
+            "city": "hyd",
+            "salary": 10000
+            },
+            {
+            "firstname": "srikanth",
+            "lastname": "gubbala",
+            "age": 32,
+            "gender": "male",
+            "city": "bengaluru",
+            "salary": 20000
+            },
+            {
+            "firstname": "pradeep",
+            "lastname": "reddy",
+            "age": 21,
+            "gender": "male",
+            "city": "hyd",
+            "salary": 30000
+            },
+            {
+            "firstname": "mounika",
+            "lastname": "mudiraj",
+            "age": 20,
+            "gender": "female",
+            "city": "nalgonda",
+            "salary": 30000
+            },
+            {
+            "firstname": "nikhil",
+            "lastname": "m",
+            "age": 22,
+            "gender": "male",
+            "city": "guntur",
+            "salary": 2000
+            },
+            {
+            "firstname": "riya",
+            "lastname": "bhadouria",
+            "age": 14,
+            "gender": "female",
+            "city": "indore",
+            "salary": 40000
+            }
+            ];
+           
+             people.forEach (function(y){
+             var tr1=document.createElement("tr")
+             var td1=document.createElement("td")
+              td1.innerHTML=y.firstname
+            
+             var td2=document.createElement("td")
+              td2.innerHTML=y.lastname
+            
+             var td3=document.createElement("td")
+              td3.innerHTML=y.age
+            
+             var td4=document.createElement("td")
+                 td4.innerHTML=y.gender
+            
+             var td5=document.createElement("td")
+              td5.innerHTML=y.city
+             var td6=document.createElement("td")
+              td6.innerHTML=y.salary
+
+              tr1.appendChild(td1)
+              tr1.appendChild(td2)
+              tr1.appendChild(td3)
+              tr1.appendChild(td4)
+              tr1.appendChild(td5)
+              tr1.appendChild(td6)
+               x.appendChild(tr1)
+             })
+              
+   
+        </script>
+    </body>
+</html>

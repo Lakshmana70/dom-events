@@ -1,0 +1,47 @@
+<html>
+    <head></head>
+    <body>
+        <center>
+       <h1>26/08/2024</h1>
+        <h1><span id="d2"></span><span id="d1"></span></h1>
+         <button  onclick="abc(event)">checkin</button>
+         <button onclick="abc(event)">checkout</button>
+         <h1><span id="d3"></span></h1>
+        </center>
+         <script>
+             var i=0
+             var z=" "
+             var n=" "
+
+           var y=setInterval(function(){
+            var a=new Date()
+
+            var b=a.getHours()
+            var c=a.getMinutes()
+            var d=a.getSeconds()
+            var e =a.getMilliseconds()
+              z=d;
+              n=e;
+             document.getElementById("d1").innerHTML= b+":"+c+" :"+d+":"+e
+             
+             
+              },100)
+           
+              function abc(){
+                 
+                    
+                document.getElementById("d3").innerHTML="Total time "+z+":"+n
+
+              }
+           
+             
+
+                  
+           
+
+           
+           
+            
+        </script>
+    </body>
+</html>

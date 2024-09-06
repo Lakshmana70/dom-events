@@ -1,0 +1,55 @@
+<html>
+    <header>
+        <style>
+            img{
+                width: 200px;
+                height: 200px;
+               
+
+            }
+            #s2{
+           margin-left: 500px;
+           margin-top: 50px;
+             display: flex;
+            }
+            #d1{
+                width: 300px;
+                height: 300px;
+               margin-left: 690px;
+            }
+            .xyz{
+                display: inline-flex;
+                margin: 10px;
+            }
+
+        </style>
+    </header>
+    <body>
+        <center>
+           
+        <div >
+            <div class="xyz">
+                <img src="https://t3.ftcdn.net/jpg/00/01/47/28/360_F_1472821_kMjcU0El8NkcU0k7zNtlVTU0Fl8W2l.jpg" onclick="abc(event)" >
+
+            </div>
+            <div class="xyz">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCfQw6ty-wbnu46A51GKb4JKnrKPDZec8cgEClM-NrhrRSx3PZyjXXP-f1_Q&s" onclick="abc(event)">
+
+            </div>
+            <div class="xyz">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYDEfWtejP5_trovlPjPXMZLzGruSrXZEi2A&s" onclick="abc(event)">
+             </div>
+        </div>
+           <div><img id="d1"></div>
+        </center>
+       
+        <script>
+           function abc(ev){
+             document.getElementById("d1").src=ev.target.src
+           }
+          
+        </script>
+    </body>
+</html>
+
+

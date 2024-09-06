@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <style>
+            #s1{
+                text-align: center;
+            
+            }
+            #s2{
+                color: red;
+                text-align: center;
+            }
+            #s3{
+                
+                text-align: center;
+             
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="s2">Like and dislike</h1>
+
+        <div id="s1">
+            <button onclick="abc()" id="r1">Like</button>
+            <h1 id="p1"></h1>
+            </div>
+            <br>
+        <div id="s3">
+            <button onclick="xyz()" id="r2">Dislike</button>
+            <h1 id="p2"></h1>
+       </div>
+        <script>
+           var y=document.getElementById("r1")
+              y.style.backgroundColor="aqua"
+              y.style.width="50px"
+              y.style.height="50px"
+               var z=document.getElementById("r2")
+              z.style.backgroundColor="red"
+              z.style.width="50px"
+              z.style.height="50px"
+              var a=0
+              function abc(){
+                a++
+                var x=document.getElementById("p1")
+                x.style.display="inline"
+                x.innerHTML=a
+                x.style.padding="10px"
+              }
+              function xyz(){
+                a--
+                var t=document.getElementById("p2")
+                t.style.display="inline"
+                t.innerHTML=a
+                t.style.padding="10px"
+                if(a==0){
+                    a=1
+                }
+              }
+              
+        </script>
+    </body>
+</html>

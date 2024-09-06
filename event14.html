@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <style>
+            #s1{
+                color: red;
+            }
+            #s2{
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1 id="s1">Add students</h1>
+            <input type="text" id="d1">
+            <button onclick="abc()" id="s2">Add students</button>
+            <li id="d2">lakshmana</li>
+        </center>
+         <script>
+              var y=document.getElementById("d1")
+                
+            function abc(){
+              var nli=document.createElement("li")
+               nli.innerHTML=y.value
+               document.getElementById("d2").appendChild(nli)
+            }
+        </script>
+    </body>
+</html>

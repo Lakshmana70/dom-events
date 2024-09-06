@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <style>
+            #s1{
+                width: 100px;
+                height: 100px;
+                border:  2px solid;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="s1"></div>
+        <button onclick="abc(event)">red</button>
+        <button onclick="abc(event)">blue</button>
+        <button onclick="abc(event)">green</button>
+        <button onclick="abc(event)">yellow</button>
+        
+        
+        <script>
+          function abc(e){
+            var y=e.target.innerHTML
+            if(y!= 0){
+                document.getElementById("s1").style.background=y
+            }
+            else{
+                document.getElementById("s1").style.backgroundColor=" "
+            } 
+         }
+         
+        </script>
+    </body>
+</html>

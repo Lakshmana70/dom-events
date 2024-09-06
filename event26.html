@@ -1,0 +1,47 @@
+<html>
+    <head></head>
+    <body>
+        <center>
+            <input type="text" id="d2">
+            <button onclick="abc()">save</button>
+            <div id="d1">
+
+            </div>
+        </center>
+       <script>
+        var y= document.getElementById("d2")
+        var pattern= /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@$&])[A-Za-z\d@$&]{8,}$/;
+         function abc(){
+              if(pattern.test(y.value)){
+                document.getElementById("d1").innerHTML=" "
+              }
+              else{
+                 xyz()
+              }
+              
+         }
+         function xyz(){
+            var h1=document.createElement("h1")
+              h1.innerHTML="Please enter the given format"
+            
+            var ul=document.createElement("ol")
+              ul.innerHTML="An alphanumaric password must be used"
+            
+            var ul2=document.createElement("ol")
+              ul2.innerHTML="The first letter always needs to capital"
+            
+            var ui3=document.createElement("ol")
+              ui3.innerHTML="A spacial chaaracter must be includein the password (@ $ &)"
+            var ui4=document.createElement("ol")
+              ui4.innerHTML="The length of password must exceed&charactres"
+              var x=document.getElementById("d1")
+              x.appendChild(h1)
+              x.appendChild(ul)
+              x.appendChild(ul2)
+              x.appendChild(ui3)
+              x.appendChild(ui4)
+            
+        }
+        </script>
+    </body>
+</html>

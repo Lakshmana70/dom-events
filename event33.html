@@ -1,0 +1,40 @@
+<html>
+    <head></head>
+    <body>
+        <center>
+            <button onclick="abc(event)">IN</button>
+            <button onclick="abc(event)">OUT</button>
+            <button onclick="xyz()">TIME</button>
+             <div id="d2"></div>
+             <h1>Time log</h1>
+              <div id="d1"></div>
+
+        </center>   
+        <script>
+             var startTime=" "
+           function abc(ev){
+              var x=new Date().toISOString()
+              var y=document.createElement("h1")
+               y.innerHTML=ev.target.innerHTML +":"+ x
+              document.getElementById("d1").appendChild(y) 
+               if(ev.target.innerHTML=="IN"){
+                   startTime= new Date()
+               }
+            
+           }
+           function xyz(){
+              document.getElementById("d2").innerHTML=" "
+            if(startTime)
+              var endTime=new Date()
+              console.log(endTime)
+              var z=(endTime -startTime)
+              var h1=document.createElement("h1")
+              h1.innerHTML="Total Time worked :"+z+"Ms"
+              document.getElementById("d2").appendChild(h1)
+              
+           }
+          
+           
+        </script>
+    </body>
+</html>

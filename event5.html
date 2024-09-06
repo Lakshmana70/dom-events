@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+            #s1{
+                color: red;
+                text-align: center;
+            }
+            #s2{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body >
+        <h1 id="s1">toggle button to show true/false</h1>
+        <div id="s2">
+            <button onclick="abc(event)" id="s3">toggle</button>
+            <h1 id="d1"> </h1>
+        </div>
+       
+        <script>
+           
+           var ar=["TRUE","FALSE"]
+           var i=0
+          function abc(e){
+           var y=document.getElementById("d1")
+            y.style.display="inline"
+            y.style.textAlign="center"
+            y.style.padding="0px"
+            y.innerHTML=ar[i]
+
+          
+          i++
+          if(i==ar.length){
+            i=0
+          }
+              
+           
+          }
+        </script>
+    </body>
+</html>

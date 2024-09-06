@@ -1,0 +1,20 @@
+<html>
+ <body>
+    <center>
+        <input type="date" onchange="abc(event)">
+        <h1 id="d1" >  </h1>
+    </center>
+    
+    <script>
+      function abc(ev){
+         
+         var x=  (new Date(ev.target.value)).getTime()
+         var y= (new Date()).getTime()
+         var z= (y-x)/(1000*365*60*60*24)
+         document.getElementById("d1").innerHTML= "Your Age is :" +parseInt(z)+"Years old"
+         
+      }
+      
+    </script>
+ </body>
+</html>

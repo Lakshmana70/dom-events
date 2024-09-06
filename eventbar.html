@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <style>
+            
+            #s2{
+                width: 0px;
+                height: 20px;
+               
+                background-color: blue;
+               
+            }
+            #d1{
+                width: 300px;
+                height: 20px;
+                border: 1px solid;
+            }
+        </style>
+    </head>
+    <body>
+             
+            <div id="d1">
+             <div id="s2">
+
+             </div>   
+            </div>
+         <br>
+         <button onclick="play()" style="background-color:green;">play</button>
+         <button onclick="xyz()" style="background-color: yellow;">paused</button>
+          <button onclick="abc()" style="background-color: red;">Reset</button>
+      
+       
+        <script>
+            var y=0
+            var z=" "
+            function play(){
+                y=0
+            var x=setInterval(()=>{
+              document.getElementById("s2").style.width=y
+               y++
+               if(y==300){
+                 y=0
+               }
+            },100 )
+             z=x
+            }
+            function xyz(){
+                clearInterval(z)
+            }
+            
+            function abc(){
+                 var y=0
+                 document.getElementById("s2").style.width=y
+                clearInterval(z)
+                
+            }
+            
+        </script>
+         </div>
+        
+    </body>
+</html> 
